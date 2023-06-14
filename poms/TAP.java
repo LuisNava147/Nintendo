@@ -3,6 +3,7 @@ package poms;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -76,5 +77,33 @@ public class TAP {
 		cb.selectByVisibleText(option);
 		return value;
 	}
+	
+	public void clickOnLogo() {
+		String LogoXpath = "//*[@id=\"Wikipedia1_wikipedia-search-form\"]/div/span[1]/a/img";
+		WebElement Lx = driver.findElement(By.xpath(LogoXpath));
+		Lx.click();
+	
+	}
+	
+	public void clickOnGoogle() {
+		String GoogleXpath = "Google";
+		WebElement gg = driver.findElement(By.xpath(GoogleXpath));
+		gg.click();
+		
+	}
+	
+	public void clickOnYouTube() {
+		String YouTubeXpath = "YouTube";
+		WebElement yy= driver.findElement(By.xpath(YouTubeXpath));
+		yy.click();
+		
+	}
+	
+	/*public void typeOnSearchBar(String value) {
+	    String searchBarId = "Google";
+		WebElement searchBar = driver.findElement(By.id(searchBarId));
+	    searchBar.sendKeys();
+	    searchBar.sendKeys(Keys.ENTER);
+	  }*/
 	
 }
